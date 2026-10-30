@@ -6,7 +6,7 @@ rulings, translations, new exhibits, bug reports.
 ## Development setup
 
 ```bash
-git clone https://github.com/your-username/commit-court.git
+git clone https://github.com/alibehnam14/commit-court.git
 cd commit-court
 python -m venv .venv
 . .venv/bin/activate            # Windows: .venv\Scripts\activate

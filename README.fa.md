@@ -10,7 +10,7 @@
 </div>
 
 ```bash
-pipx install git+https://github.com/your-username/commit-court.git
+pipx install git+https://github.com/alibehnam14/commit-court.git
 commit-court . --lang fa
 ```
 

@@ -8,7 +8,7 @@ One command turns any repository into a noir courtroom case file: the guilty fil
 the repeat offenders, the 3 a.m. crimes, and a verdict with a sentence.
 
 ```bash
-pipx install git+https://github.com/your-username/commit-court.git
+pipx install git+https://github.com/alibehnam14/commit-court.git
 ```
 
 [English](README.md) · [فارسی](README.fa.md)
@@ -90,7 +90,7 @@ Segoe UI, Tahoma, Noto Sans Arabic…). Code, hashes, paths and numbers stay lef
 ### AI verdict (optional)
 
 ```bash
-pipx install "commit-court[ai] @ git+https://github.com/your-username/commit-court.git"
+pipx install "commit-court[ai] @ git+https://github.com/alibehnam14/commit-court.git"
 export ANTHROPIC_API_KEY=sk-ant-...
 commit-court . --ai
 ```
@@ -145,7 +145,7 @@ Bug reports, new rulings (in any language!) and new exhibits are welcome. See
 [CONTRIBUTING.md](CONTRIBUTING.md). The short version:
 
 ```bash
-git clone https://github.com/your-username/commit-court.git
+git clone https://github.com/alibehnam14/commit-court.git
 cd commit-court
 python -m venv .venv && . .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
