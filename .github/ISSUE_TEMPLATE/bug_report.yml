@@ -1,0 +1,46 @@
+name: Bug report
+description: Something broke, crashed, or rendered wrong.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug with the court. Please don't paste private commit messages or code.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you run, and what did you expect instead?
+      placeholder: "Ran `commit-court . --lang fa` and the weekday chart was empty."
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Terminal output
+      description: Copy the full output, including any traceback.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: commit-court version
+      placeholder: "commit-court --version"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: OS, Python and git versions
+      placeholder: "Ubuntu 24.04, Python 3.12.3, git 2.43"
+    validations:
+      required: true
+  - type: dropdown
+    id: lang
+    attributes:
+      label: Report language
+      options: ["en", "fa"]
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (for rendering bugs)
+      placeholder: "Firefox 131"

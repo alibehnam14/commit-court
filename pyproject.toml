@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "commit-court"
+dynamic = ["version"]
+description = "Put your git history on trial: a courtroom-style HTML case file of your repo's crimes."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ali Behnam" }]
+keywords = ["git", "cli", "commit-messages", "report", "fun", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+dependencies = []
+
+[project.optional-dependencies]
+ai = ["anthropic>=0.75"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+commit-court = "commit_court.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/commit-court"
+Issues = "https://github.com/your-username/commit-court/issues"
+
+[tool.hatch.version]
+path = "src/commit_court/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/commit_court"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "scripts", "README.md", "README.fa.md", "LICENSE", "CONTRIBUTING.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

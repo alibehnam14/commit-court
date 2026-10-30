@@ -1,0 +1,32 @@
+name: Feature request
+description: A new exhibit, ruling, language or flag.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should the court do?
+      placeholder: "Add an exhibit for commits that touch 100+ files at once (the 'mass tampering' charge)."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it be useful or fun?
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New exhibit / statistic
+        - New verdict ruling
+        - New language / translation
+        - CLI flag
+        - Visual / layout
+        - Other
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This idea does not require uploading code or sending more data to the AI.
